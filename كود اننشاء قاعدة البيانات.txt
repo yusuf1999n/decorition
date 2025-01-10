@@ -1,0 +1,50 @@
+CREATE DATABASE DecorMaster;
+
+USE DecorMaster;
+
+-- جدول الديكورات الداخلية
+CREATE TABLE IntDecor (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImagePath VARCHAR(255) -- مسار الصورة
+);
+
+-- جدول الديكورات الخارجية
+CREATE TABLE ExtDecor (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImagePath VARCHAR(255) -- مسار الصورة
+);
+
+-- جدول الدهانات الداخلية
+CREATE TABLE IntPaint (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImagePath VARCHAR(255) -- مسار الصورة
+);
+
+-- جدول الدهانات الخارجية
+CREATE TABLE ExtPaint (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImagePath VARCHAR(255) -- مسار الصورة
+);
+
+-- جدول الحدائق المنزلية
+CREATE TABLE HomeGarden (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    ImagePath VARCHAR(255) -- مسار الصورة
+);
+تعديل أسماء الاعمده
+-- تعديل الجداول باضافة اسم مختلف لكل عمود صور ب شكل مختصر
+
+-- جدول الديكورات الداخلية
+ALTER TABLE IntDecor CHANGE COLUMN ImagePath IntImgPath VARCHAR(255);
+
+-- جدول الديكورات الخارجية
+ALTER TABLE ExtDecor CHANGE COLUMN ImagePath ExtImgPath VARCHAR(255);
+
+-- جدول الدهانات الداخلية
+ALTER TABLE IntPaint CHANGE COLUMN ImagePath IntPntPath VARCHAR(255);
+
+-- جدول الدهانات الخارجية
+ALTER TABLE ExtPaint CHANGE COLUMN ImagePath ExtPntPath VARCHAR(255);
+
+-- جدول الحدائق المنزلية
+ALTER TABLE HomeGarden CHANGE COLUMN ImagePath GrdImgPath VARCHAR(255);
